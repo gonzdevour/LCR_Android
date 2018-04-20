@@ -1,0 +1,110 @@
+html,body,.main{
+	border : 0;
+    margin: 0;
+    padding: 0;
+	padding : 0;
+	background: #e8484a;
+}
+.main{
+	background-image: url(../img/bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;			
+}
+.head{
+	height:60px;
+	background-color : #e8484a;
+	position: relative;
+}
+.contain{
+	text-align : center;
+}
+.setting input{
+	width: 100%;
+	color: #000;
+	font-size: 1.2em;
+}
+.nav{
+	margin:10px 0px;
+	font-size: 1.4em;
+}
+.btn{
+	margin: 2%;
+	width:46%;
+	float: left;
+	padding: 4px 0px;
+	border-radius: 5px;
+	font-size: 1.6em;
+}
+.unselect{
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
+#qrcode img{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#certificationBox{
+    background-color: #FFF;
+    padding: 10px 10px 60px 10px;
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    margin: auto;
+}
+.cer_contain, .cer_qrcode{
+	padding: 10px;	
+}
+.cer_contain textarea{
+	width: 100%;
+	height: 100px;
+}
+.cer_contain input{
+	width: 100%;	
+	
+}
+.cer_title{
+	text-align: left;
+	padding: 5px;
+}
+.title{
+	margin: 10px;
+	text-align:center;
+}
+.btn_scan,.cer_save{
+    background-color: #e8484a;
+    padding: 10px;
+    color: #FFF;
+    position: relative;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    width: 100px;	
+	
+}
+@media screen and (min-width: 800px) {
+	.cer_contain,.cer_qrcode{
+		float: right;
+		box-sizing: border-box;
+		margin: 0;		
+	}
+	.cer_contain{
+		width: 60%;
+	}
+	.cer_qrcode{
+		width: 40%;
+	}
+
+}

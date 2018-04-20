@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+        id        = "com.tagfans.vlc"
+        version   = "1.0.0"
+		android-versionCode="10000"
+		ios-CFBundleVersion="1.0.0">
+
+    <name>VLC</name>
+
+    <description>
+        Tagfans.com small business application. Enable business to interact with customer directly.
+    </description>
+
+    <author href="http://store.tagfans.com" email="cmacma7@gmail.com">
+        Tagfans Team
+    </author>
+	
+	<content src="index.html"/>
+
+    <preference name="permissions"                value="none"/>
+
+	<platform name="ios">
+		<preference name="phonegap-version"           value="cli-6.3.0" /> 
+	</platform>
+	<platform name="android">
+		<preference name="phonegap-version"           value="cli-6.3.0" /> 
+	</platform>	
+	
+    <preference name="orientation"                value="portrait" />       
+    <preference name="target-device"              value="universal" />     
+    <preference name="fullscreen"                 value="false" />         
+    <preference name="webviewbounce"              value="true" />           
+	<preference name="DisallowOverscroll" 		  value="true" />
+    <preference name="prerendered-icon"           value="true" />          
+    <preference name="stay-in-webview"            value="false" />        
+    <preference name="ios-statusbarstyle"         value="black-opaque" />   
+    <preference name="detect-data-types"          value="true" />           
+    <preference name="exit-on-suspend"            value="false" />         
+    <preference name="show-splash-screen-spinner" value="true" />          
+    <preference name="auto-hide-splash-screen"    value="true" />         
+    <preference name="disable-cursor"             value="false" />        
+	<preference name="android-minSdkVersion"      value="15" />           
+    <preference name="android-targetSdkVersion"   value="15" />            
+	<preference name="android-installLocation"    value="auto" />           
+	<preference name="BackgroundColor" 			  value="0xffffffff"/>
+	<preference name="FadeSplashScreen" 		  value="false"/>
+	<preference name="SplashScreenDelay" 		  value="5000"/>
+	<gap:plugin name="cordova-plugin-battery-status" source="npm" />
+    <gap:plugin name="cordova-plugin-camera" source="npm" />
+    <gap:plugin name="cordova-plugin-console" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
+    <gap:plugin name="cordova-plugin-contacts" source="npm" />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-device-motion" source="npm" />
+	<gap:plugin name="cordova-plugin-device-orientation" source="npm" />
+	<gap:plugin name="cordova-plugin-dialogs" source="npm" />
+	<gap:plugin name="cordova-plugin-geolocation" source="npm" />
+	<gap:plugin name="cordova-plugin-globalization" source="npm" />
+	<gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+	<gap:plugin name="cordova-plugin-media" source="npm" />
+	<gap:plugin name="cordova-plugin-network-information" source="npm" />
+	<gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+	<gap:plugin name="cordova-plugin-vibration" source="npm" />	
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	
+
+	<!--vlc plugin-->
+	<plugin name="cordova-plugin-lcr" source="npm" spec="~0.2.1" />
+
+	<!--ios config-->
+	<platform name="ios">
+		<gap:config-file parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+			<false/>
+		</gap:config-file>
+		
+		<gap:config-file parent="UIStatusBarHidden" overwrite="true">
+			<true/>
+		</gap:config-file>
+		
+		<gap:config-file  parent="CFBundleShortVersionString">
+			<string>1.0.1</string>
+		</gap:config-file>
+
+		<gap:config-file  parent="UIStatusBarHidden">
+			<true/>
+		</gap:config-file>
+
+		<gap:config-file parent="UIViewControllerBasedStatusBarAppearance">
+			<false/>
+		</gap:config-file>
+		
+		<gap:config-file parent="CFBundleDisplayName">
+			<string>vlc</string>
+		</gap:config-file>
+
+		<gap:config-file parent="CFBundleName">
+			<string>vlc</string>
+		</gap:config-file>
+	</platform>	
+		
+	<!--Set whitelist-->
+	<allow-navigation href="*" />
+	<allow-intent href="*" />
+    <access origin="*" />
+</widget>
